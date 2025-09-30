@@ -1,13 +1,8 @@
 # Test
-{
 StrToMember(
     "[period].[period].[" +
     [}ElementAttributes_period].(
-        StrToMember(
-            "[period].[period].[" +
-            NumberToString(Val(Subst([period].[period].[202607QTD].Name, 1, 6)) - 100) + "QTD]"
-        ),
-        [base_period]
+        [}ElementAttributes_period].([period].[period].[202707QTD], [base_period]), 
+        [prev_year]
     ) + "]"
 )
-}
